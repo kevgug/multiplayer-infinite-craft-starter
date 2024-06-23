@@ -1,6 +1,11 @@
+import { cloudstate } from "freestyle-sh";
+
+@cloudstate
 export class EmojiNoun {
-	text: string = '';
-	emoji: string = '';
+	static id = crypto.randomUUID();
+
+	text: string = "";
+	emoji: string = "";
 	discovered: boolean = false;
 
 	static createKey(a: EmojiNoun, b: EmojiNoun): string {
@@ -11,10 +16,10 @@ export class EmojiNoun {
 		return `${a.text};${b.text}`;
 	}
 	static STARTING_NOUNS: EmojiNoun[] = [
-		{text: 'Water', emoji: '💧', discovered: false},
-		{text: 'Fire', emoji: '🔥', discovered: false},
-		{text: 'Wind', emoji: '🌬️', discovered: false},
-		{text: 'Earth', emoji: '🌍', discovered: false},
+		{text: "Water", emoji: "💧", discovered: false},
+		{text: "Fire", emoji: "🔥", discovered: false},
+		{text: "Wind", emoji: "🌬️", discovered: false},
+		{text: "Earth", emoji: "🌍", discovered: false},
 	];
 }
 

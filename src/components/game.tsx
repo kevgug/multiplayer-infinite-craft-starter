@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { CSSTransition, SwitchTransition, TransitionGroup } from "react-transition-group";
-import Chip from "./chip";
+import Chip from "./Chip";
 import "../styles/app.css";
 
 import { EmojiNoun } from "../cloudstate/noun";
@@ -18,7 +18,7 @@ export default function Game(props: InitialState) {
 }
 
 function ChipList(props: InitialState) {
-	const nouns = EmojiNoun.STARTING_NOUNS;
+	const nouns = props.nouns;
 
 	const hasStarted = nouns.length > 4
 	const explainerRef = useRef(null);
@@ -33,7 +33,7 @@ function ChipList(props: InitialState) {
 					addEndListener={(done: any) => {
 						(subheaderRef.current as any).addEventListener("transitionend", done, false)
 					}}
-					classNames='fade'
+					classNames="fade"
 				>
 					<div
 						ref={subheaderRef}
@@ -45,7 +45,7 @@ function ChipList(props: InitialState) {
 							<button className="text-gray-400 hover:text-gray-200 transition ml-2" onClick={() => {
 								navigator.clipboard.writeText(props.roomId);
 								toast.dismiss();
-								toast.success('Room ID copied to clipboard!', {
+								toast.success("Room ID copied to clipboard!", {
 									position: "bottom-right",
 									duration: 2000,
 								});

@@ -1,13 +1,11 @@
-// import { useCloud } from "freestyle-sh";
 import { useState } from "react";
-// import type { RoomManagerCS } from "../cloudstate/roomManager";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function RoomManager() {
-	const [textInput, setTextInput] = useState('');
+	const [textInput, setTextInput] = useState("");
 
-	const joinRoom = (roomId: string) => { }
-	const createRoom = () => { }
+	const joinRoom = (roomId: string) => { };
+	const createRoom = () => { };
 
 	return (
 		<div className="flex flex-col justify-center items-center">

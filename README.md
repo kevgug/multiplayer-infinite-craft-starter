@@ -12,12 +12,12 @@ This project serves as the starting point for the tutorial on creating a multipl
 ## Getting Started
 
 1. Clone this repository.
-2. Follow the setup instructions in the [full tutorial](https://blog.freestyle.dev/blogs/multiplayer-infinite-craft).
+2. Follow the setup instructions in the [full tutorial](https://blog.freestyle.dev/posts/multiplayer-infinite-craft).
 3. Start building your own multiplayer Infinite Craft game!
 
 ## Full Tutorial
 
-For step-by-step instructions on how to build this game, including implementing multiplayer functionality, integrating with Freestyle, and adding generative AI features, please refer to the [full tutorial](https://blog.freestyle.dev/blogs/multiplayer-infinite-craft).
+For step-by-step instructions on how to build this game, including implementing multiplayer functionality, integrating with Freestyle, and adding generative AI features, please refer to the [full tutorial](https://blog.freestyle.dev/posts/multiplayer-infinite-craft).
 
 ## License
 

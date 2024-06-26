@@ -4,7 +4,7 @@ import Chip from "./Chip";
 import "../styles/app.css";
 
 import { EmojiNoun } from "../cloudstate/noun";
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster, toast } from "sonner";
 
 interface InitialState {
 	roomId: string;
@@ -44,9 +44,7 @@ function ChipList(props: InitialState) {
 						{hasStarted &&
 							<button className="text-gray-400 hover:text-gray-200 transition ml-2" onClick={() => {
 								navigator.clipboard.writeText(props.roomId);
-								toast.dismiss();
 								toast.success("Room ID copied to clipboard!", {
-									position: "bottom-right",
 									duration: 2000,
 								});
 							}}>
@@ -67,7 +65,7 @@ function ChipList(props: InitialState) {
 					)}
 				</TransitionGroup>
 			</div>
-			<Toaster />
+			<Toaster richColors position="bottom-right" />
 		</div>
 	);
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "sonner";
 
 export default function RoomManager() {
 	const [textInput, setTextInput] = useState("");
@@ -39,7 +39,7 @@ export default function RoomManager() {
 					Create Room
 				</button>
 			</div>
-			<Toaster />
+			<Toaster richColors position="bottom-right" />
 		</div>
 	);
 }
